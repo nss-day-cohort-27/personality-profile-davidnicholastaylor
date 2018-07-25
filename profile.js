@@ -77,17 +77,18 @@ var likeMeTitleJson = profileJSONData.likeMeTitle;
 likeMe.innerHTML+=`
 <h3 class="p-1">${likeMeTitleJson}</h3>`
 
+let finalLikeMe = `<div class='row'>`
+
 for(var i = 0; i < likeMeJSON.length; i++) {
     let likeMeItem = likeMeJSON[i];
 
-    likeMe.innerHTML+=`
-    <div class="d-flex flex-row">
-    <ul>
+    finalLikeMe+=`
     <li class="p-1">${likeMeItem}</li>
-    </ul>
-    </div>
     `
 }
+
+finalLikeMe += `</div>`
+likeMe.innerHTML += finalLikeMe
 
 //////////////////////  Populate DOM Communicate
 
